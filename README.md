@@ -65,7 +65,13 @@ uv sync
 
 ## Configuração
 
-Crie um arquivo `.env` na raiz do projeto com as variáveis abaixo:
+Copie o `.env.example` para `.env` e preencha com seus próprios valores:
+
+```bash
+cp .env.example .env
+```
+
+Variáveis necessárias:
 
 ```bash
 FOUNDRY_PROJ_ENDPOINT=   # endpoint do projeto no Azure AI Foundry
@@ -98,6 +104,7 @@ Digite sua pergunta no prompt do terminal. O agente decide sozinho se responde d
 ├── uv.lock                      # lockfile de dependências gerado pelo uv
 ├── requirements.txt             # dependências no formato pip (alternativa ao uv)
 ├── .python-version              # versão do Python fixada para o projeto (3.13)
+├── .env.example                 # modelo das variáveis de ambiente necessárias
 ├── .env                         # variáveis de ambiente locais (não versionado, ver Configuração)
 └── .gitignore
 ```
