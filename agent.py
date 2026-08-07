@@ -15,7 +15,7 @@ from langgraph.checkpoint.memory import MemorySaver
 import os
 import warnings as ww
 ww.filterwarnings('ignore')
-from yaspin import yaspin
+from yaspin import yaspin, Spinner
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -68,7 +68,8 @@ if __name__ == '__main__':
             print('\n😊 Voce digitou QUIT, good bye!\n')
             break
 
-        with yaspin(text='Pensando', color='cyan') as run:
+        sp = Spinner(["😸", "😹", "😺", "😻", "😼", "😽", "😾", "😿", "🙀"], 250)
+        with yaspin(sp, text='Pensando', color='cyan') as run:
 
             response = agente.invoke(
                 input={
